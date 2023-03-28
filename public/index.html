@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario PDF</title>
+    <link rel="icon" href="icon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <img src="logoem.jpg" alt="Imagen" class="logo">
+        <h1>Datos Cliente</h1>
+        <form id="formulario">
+
+            <div class="input-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="input-group-inline">
+                <div class="input-inline">
+                    <label for="cedula">Cédula:</label>
+                    <input type="tel" id="cedula" name="cedula" required>
+                </div>
+                <div class="input-inline">
+                    <label for="celular">Teléfono:</label>
+                    <input type="tel" id="celular" name="celular" required>
+                </div>
+            </div>
+
+            <h2>Pagaré</h2>
+
+            <div class="input-group-inline">
+                <div class="input-inline">
+                    <label for="diasVencimiento">Días de vencimiento:</label>
+                    <input type="number" id="diasVencimiento" name="diasVencimiento" min="0" required>
+                </div>
+                <div class="input-inline">
+                    <label for="precio">Precio ($)</label>
+                    <input type="number" id="precio" name="precio" min="0" step="0.01" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="valorLetras">Valor en letras ($)</label>
+                <input type="text" id="valorLetras" name="valorLetras" required>
+            </div>
+
+            <div class="input-group-inline">
+                <div class="input-inline">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+                <div class="input-inline">
+                    <label for="cuota">Cuota ($)</label>
+                    <input type="number" id="cuota" name="cuota" min="0" step="0.01" required>
+                </div>
+            </div>
+
+            <h2>Contrato de Arrendamiento de Equipo Medico</h2>
+
+            <div class="input-group">
+                <label for="accesorios">Accesorios:</label>
+                <select id="accesorios" name="accesorios" class="select-button">
+                    <option value="">Selecciona un accesorio</option>
+                    <option value="Cama Hospitalaria Kristell">Cama Hospitalaria Kristell</option>
+                    <option value="Concentrador Inogen One G5">Concentrador Inogen One G5</option>
+                    <option value="Concentrador Inogen at home">Concentrador Inogen at home</option>
+                    <option value="Gruas Móviles">Gruas Móviles</option>
+                    <option value="Tanque de Oxígeno">Tanque de Oxígeno</option>
+                    <option value="Apnea AutoCPAP">Apnea AutoCPAP</option>
+                    <option value="Mesa Auxiliar Plegable">Mesa Auxiliar Plegable</option>
+                    <option value="Concentrador Inogen One G3">Concentrador Inogen One G3</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="descripcion">Descripción:</label>
+                <select id="descripcion" name="descripcion" class="select-button">
+                    <option value="">Selecciona una descripción</option>
+                    <option value="4 Movimientos de Colchón">4 Movimientos de Colchón</option>
+                    <option value="Concentrador Portátil">Concentrador Portátil</option>
+                    <option value="Concentrador Estacionario at home">Concentrador Estacionario at home</option>
+                    <option value="Elevador Pasivo de Pacientes">Elevador Pasivo de Pacientes</option>
+                    <option value="Kit de Oxígeno">Kit de Oxígeno</option>
+                    <option value="Estudio del Sueño">Estudio del Sueño</option>
+                    <option value="Mesa Auxiliar Plegable">Mesa Auxiliar Plegable</option>
+                    <option value="Concentrador Portátil">Concentrador Portátil</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+            </div>
+
+            <div class="input-group-inline">
+                <div class="input-inline input-inline-space">
+                    <label for="dia">Día:</label>
+                    <input type="number" id="dia" name="dia" min="1" max="31" required>
+                </div>
+                <div class="input-inline input-inline-space">
+                    <label for="mes">Mes:</label>
+                    <input type="text" id="mes" name="mes" required>
+                </div>
+                <div class="input-inline input-inline-space">
+                    <label for="anio">Año:</label>
+                    <input type="number" id="anio" name="anio" min="2010" required>
+                </div>
+            </div>
+
+            <h2>Contrato de Arriendo Inogen At Home</h2>
+
+            <div class="input-group-inline">
+                <div class="input-inline input-inline-space">
+                    <label for="fechaInicio">Fecha de inicio:</label>
+                    <input type="date" id="fechaInicio" name="fechaInicio" required>
+                </div>
+                <div class="input-inline input-inline-space">
+                    <label for="diaCobranza">Día de cobranza:</label>
+                    <input type="date" id="diaCobranza" name="diaCobranza" readonly>
+                </div>
+            </div>
+
+            <div class="input-group-inline">
+                <div class="input-inline input-inline-space">
+                    <label for="precioAuto">Precio ($)</label>
+                    <input type="text" id="precioAuto" name="precioAuto" readonly>
+                </div>
+                <div class="input-inline input-inline-space">
+                    <label for="mensualidad">Mensualidad ($)</label>
+                    <input type="text" id="mensualidad" name="mensualidad" readonly>
+                </div>
+            </div>
+            
+            <div class="input-field">
+                <label for="precioAccesorios">Accesorios (vaso, cánula, etc.) ($)</label>
+                <input type="number" id="precioAccesorios"  min="0" step="0.01">
+            </div>
+            
+            <div class="input-field">
+                <label for="precioEntrega">Entrega, instalación y retiro por una sola vez ($)</label>
+                <input type="number" id="precioEntrega"  min="0" step="0.01">
+            </div>
+            
+            <div class="input-field">
+                <label for="descuento">Descuento (%)</label>
+                <input type="number" id="descuento"  min="0" max="100" step="0.01">
+            </div>
+
+            <div>
+                <label for="subtotal">Subtotal ($)</label>
+                <input type="text" id="subtotal" readonly>
+            </div>
+
+            <div>
+                <label for="iva">IVA ($)</label>
+                <input type="text" id="iva" readonly>
+            </div>
+
+            <div>
+                <label for="precioTotal">Precio Total ($)</label>
+                <input type="text" id="precioTotal" readonly>
+            </div>
+
+            <div class="button-container">
+                <button type="button" id="calcularValores">Calcular valores</button>
+            </div>
+
+            <h2>Datos de Facturación</h2>
+            <div class="input-group">
+                <label for="nombreFacturacion">Nombres y Apellidos:</label>
+                <input type="text" id="nombreFacturacion" name="nombreFacturacion" required>
+            </div>
+            
+            <div class="input-group-inline">
+                <div class="input-inline">
+                    <label for="cedulaFacturacion">Cédula:</label>
+                    <input type="text" id="cedulaFacturacion" name="cedulaFacturacion" required>
+                </div>
+                <div class="input-inline">
+                    <label for="telefonoFacturacion">Teléfono:</label>
+                    <input type="tel" id="telefonoFacturacion" name="telefonoFacturacion" required>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="direccionFacturacion">Dirección:</label>
+                <input type="text" id="direccionFacturacion" name="direccionFacturacion" required>
+            </div>
+            <div class="input-group">
+                <label for="emailFacturacion">Correo Electrónico:</label>
+                <input type="email" id="emailFacturacion" name="emailFacturacion" required>
+            </div>
+            <div class="button-container">
+                <button type="button" id="descargarPdf">Descargar PDF</button>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <div class="container">
+            <p>Marco V. Esparza G.</p>
+            <p>Versión: 1.1.0</p>
+            <p>&copy; 2023. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

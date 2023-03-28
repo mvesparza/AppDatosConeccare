@@ -1,0 +1,22 @@
+{
+    "name": "pdf-form",
+    "version": "1.0.0",
+    "description": "Aplicación que genera y descarga un PDF a partir de los datos del formulario.",
+    "main": "app.js",
+    "scripts": {
+      "start": "node app.js"
+    },
+    "dependencies": {
+      "express": "^4.17.3",
+      "pdf-lib": "^1.18.0"
+    },
+    "devDependencies": {},
+    "keywords": [
+      "pdf",
+      "form",
+      "express"
+    ],
+    "author": "Marco Esparza",
+    "license": "ISC"
+  }
+  
