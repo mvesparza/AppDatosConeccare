@@ -10,7 +10,7 @@ app.post('/generar-pdf', async (req, res) => {
     const { diasVencimiento, precio, valorLetras, fecha, cuota, nombre, cedula, celular, accesorios, descripcion, direccion, dia, mes, anio, fechaInicio, diaCobranza, precioAuto, mensualidad, precioAccesorios, precioEntrega, descuento, iva, precioTotal, nombreFacturacion, cedulaFacturacion, direccionFacturacion, emailFacturacion, telefonoFacturacion} = req.body; // Campos agregados
 
     // Cargar y modificar el PDF
-    const pdfBytes = fs.readFileSync('plantilla.pdf'); // Reemplaza 'plantilla.pdf' con la ruta a tu archivo PDF con campos vacíos
+    const pdfBytes = fs.readFileSync('public/plantilla.pdf'); // Reemplaza 'plantilla.pdf' con la ruta a tu archivo PDF con campos vacíos
     const pdfDoc = await PDFDocument.load(pdfBytes);
     const form = pdfDoc.getForm();
     const sumaAccesoriosEntrega = parseFloat(precioAccesorios) + parseFloat(precioEntrega);
